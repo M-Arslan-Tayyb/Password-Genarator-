@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cotainer">
+        <h1 class="main-heading">Password Generator</h1>
+
+        <!-- display div  -->
+        <div class="display-div">
+            <input readonly placeholder="Password" type="text" class="display_input_field">
+            <button class="copy_button" >
+                <img src="./src/copy.svg" alt="" >
+                <!-- here "copied_animation" is a custom attribute, and we access it in JS-->
+                <div class="copied_animation"> 
+                    <!-- copied -->
+                </div>
+            </button>
+        </div>
+
+        <!-- input main div -->
+        <div class="main_div">
+            <!-- password_length_container -->
+            <div class="password_length_container">
+                <span class="pass_len_heading">Password length</span>
+                <span class="increment_counter">0</span>
+            </div>
+
+            <!-- slider -->
+            <div class="slidecontainer">
+                <input type="range" min="1" max="20" step="1" class="slider" id="myRange">
+            </div>
+
+            <!-- 4 check boxes -->
+            <div class="check">
+                <input type="checkbox"  id="upper_case" group>
+                <label for="upper_case">Include Upper Case</label>
+            </div >
+
+            <div class="check">
+                <input type="checkbox"  id="lower_case" group>
+                <label for="lower_case">Include Lower Case</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox"  id="numbers" group>
+                <label for="numbers">Include Numbers</label>
+            </div>
+
+            <div class="check" id="symbol">
+                <input type="checkbox"  id="symbols" group>
+                <label for="symbols">Include symbols</label>
+            </div>
+
+            <!-- strength -->
+            <div class="strength_div">
+                <span>
+                    Strength
+                </span>
+                <div strength_color_circle class="strength_color_circle">
+
+                </div>
+            </div>
+
+            <!-- generate password button -->
+            <button class="generate_button"> 
+                Generate Password
+            </button>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
